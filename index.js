@@ -11,7 +11,7 @@ const questions = [
     },
     {   
         type: 'input',
-        message:'Please add a description.',
+        message:'Please add a description of your project.',
         name: 'description',
     },
     {
@@ -42,7 +42,7 @@ const questions = [
     },
     {   
         type: 'input',
-        message:'What is your guthub username?',
+        message:'What is your github username?',
         name: 'questions'
     },
     {   
