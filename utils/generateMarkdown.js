@@ -67,9 +67,42 @@ function generateMarkdown(input) {
   return `
   # ${input.title}
 
+  ${renderLicenseBadge(input.license)}${renderLicenseLink(input.license)}
 
+  ## Description 
+  ${input.description} 
+  
+  ## Table of Contents
+  - [Description](###description) 
+  - [Installation](###installation)
+  - [Usage](###usage) 
+  - [Contribution](###credits) 
+  - [Tests](###tests) 
+  - [Questions](###questions) 
+  - [License](###license) 
 
-`;
+  ## Installation
+  Install Node.js. Run the following command in the terminal:
+  
+  ${input.installation}
+  ## Usage
+  ${answers.usage}
+  
+  ## Contribution 
+  ${input.contributors}
+  
+  ## Tests 
+  ${input.tests}
+  
+  ## Questions
+  ${input.contactInfo}
+  Email:  ${input.email}
+  Github: [Github Repo](https://github.com/${input.github})
+  
+  
+  ${renderLicenseSection(input.license)}`
+
+;
 }
 
 module.exports = generateMarkdown;
