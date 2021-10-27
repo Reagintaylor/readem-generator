@@ -69,8 +69,8 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(answers) {
-    fs.writeFile(`${answers.fileName}.md`, markdown(answers))
+function writeToFile(input) {
+    fs.writeFile(`${input.fileName}.md`, markdown(input))
 }
 
 // TODO: Create a function to initialize app

@@ -30,7 +30,6 @@ function renderLicenseLink(license) {
   }
 }
 
-let year = moment().format('YYYY');
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license, name) {
@@ -43,18 +42,18 @@ function renderLicenseSection(license, name) {
   } else if (license === 'GNU'){
     return ` 
     ## License 
-    GNU License Version 2, Copyright (C) ${year} ${name}
+    GNU License Version 2, Copyright (C) 2021 ${name}
     [${license}]${renderLicenseLink(license)}`;
 
   } else if (license === 'MIT'){ 
     return `
     ## License
-    Released under MIT License Copyright (c) ${year} ${name}
+    Released under MIT License Copyright (c) 2021 ${name}
     [${license}]${renderLicenseLink(license)}`;
 
   } else if (license === 'ISC'){
     return `
-    ## License, Copyright (C) ${year} ${name}
+    ## License, Copyright (C) 2021 ${name}
     [${license}]${renderLicenseLink(license)}`;
 
   } else {
@@ -73,20 +72,20 @@ function generateMarkdown(input) {
   ${input.description} 
   
   ## Table of Contents
-  - [Description](###description) 
-  - [Installation](###installation)
-  - [Usage](###usage) 
-  - [Contribution](###credits) 
-  - [Tests](###tests) 
-  - [Questions](###questions) 
-  - [License](###license) 
+  - [Description](#description) 
+  - [Installation](#installation)
+  - [Usage](#usage) 
+  - [Contribution](#credits) 
+  - [Tests](#tests) 
+  - [Questions](#questions) 
+  - [License](#license) 
 
   ## Installation
   Install Node.js. Run the following command in the terminal:
   
   ${input.installation}
   ## Usage
-  ${answers.usage}
+  ${input.usage}
   
   ## Contribution 
   ${input.contributors}
